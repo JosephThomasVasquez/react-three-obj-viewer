@@ -1,7 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+# React Threejs Object Viewer
+This app allows you to view 3D Models in the browser as well as the realtive 3D model data such as textures, and polygons.
 ## Available Scripts
 
 In the project directory, you can run:
