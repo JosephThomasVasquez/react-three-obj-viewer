@@ -9,3 +9,5 @@ node_modules/
 .env.production.local
 
 .DS_Store
+
+fbCred.json

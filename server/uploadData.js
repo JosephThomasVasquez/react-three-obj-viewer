@@ -1,19 +1,20 @@
-import { initializeApp } from "firestore-export-import";
+import firestoreService from "firestore-export-import";
 
 import serviceAccount from "./serviceAccountKey.json";
 
 // If you want to pass settings for firestore, you can add to the options parameters
 const options = {
   firestore: {
-    host: "localhost:8080",
+    host: "gs://reactthreeobj.appspot.com",
     ssl: false,
   },
 };
 
+const db = "";
+
 // Initiate Firebase App
-// appName is optional, you can omit it.
-const appName = "[DEFAULT]";
-initializeApp(serviceAccount, appName, options);
+firestoreService.initializeApp(serviceAccount, options);
+firestoreService.restore("data.json");
 
 // the appName & options are OPTIONAL
 // you can initalize the app without them
