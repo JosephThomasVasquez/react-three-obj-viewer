@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "React Threejs Object Viewer",
   "main": "server.js",
-  "type": "module",
   "scripts": {
     "server": "nodemon server"
   },

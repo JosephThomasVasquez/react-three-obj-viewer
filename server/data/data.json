@@ -1,0 +1,8 @@
+{
+    "name": "Player",
+    "polys": "10000",
+    "diffuse": "diff.jpg",
+    "roughness": "rough.jpg",
+    "metalic": "metal.jpg",
+    "ambientOcclusion": "AO.jpeg"
+}
