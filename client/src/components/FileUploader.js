@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ErrorMsg from "./ErrorMsg";
 
 const FileUploader = () => {
   const [imgFile, setImgFile] = useState(null);
@@ -30,6 +31,8 @@ const FileUploader = () => {
           className="img-file-selector"
           onChange={handleChange}
         />
+        {error && <ErrorMsg msg={error} />}
+        <div className="file-display"></div>
       </form>
     </div>
   );
