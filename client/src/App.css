@@ -53,3 +53,10 @@ h6 {
     transform: rotate(360deg);
   }
 }
+
+/* GRID */
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
