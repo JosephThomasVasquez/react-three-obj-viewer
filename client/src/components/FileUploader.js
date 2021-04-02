@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const FileUploader = () => {
   const [imgFile, setImgFile] = useState(null);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     let selectedFile = e.target.files[0];
@@ -13,10 +14,11 @@ const FileUploader = () => {
       console.log("Accepted", selectedFile);
     } else {
       setImgFile(null);
+      setError(
+        `Invalid filetype: Please select a file with type "jpeg", "jpg", "gif", or "png"`
+      );
       console.log("Not Allowed filetype", selectedFile);
     }
-
-    
   };
 
   return (
