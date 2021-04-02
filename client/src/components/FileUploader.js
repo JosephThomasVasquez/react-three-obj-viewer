@@ -18,14 +18,17 @@ const FileUploader = () => {
     const acceptedTypes = ["image/jpeg", "image/png", "image/gif"];
 
     if (selectedFile && acceptedTypes.includes(selectedFile.type)) {
+
+      // File previewer using the FileReader method
       reader.addEventListener("load", () => {
         setImgFile(reader.result);
         console.log("reader img", reader.result);
       });
+
       reader.readAsDataURL(selectedFile);
-      // setImgFile(selectedFile);
+      
       console.log("imgFile", imgFile);
-      // console.log("SelectedFile", selectedFile);
+      
       setError("");
     } else {
       setImgFile(null);

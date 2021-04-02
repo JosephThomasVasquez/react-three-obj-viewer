@@ -11,7 +11,7 @@ const ImagesGrid = () => {
           />
           <img
             src="https://source.unsplash.com/random"
-            alt="random image"
+            alt=""
             className="grid-img"
           />
           <section className="grid-image-title">This is the Title</section>
@@ -23,7 +23,7 @@ const ImagesGrid = () => {
           />
           <img
             src="https://source.unsplash.com/random"
-            alt="random image"
+            alt=""
             className="grid-img"
           />
           <section className="grid-image-title">This is the Title</section>
@@ -35,7 +35,7 @@ const ImagesGrid = () => {
           />
           <img
             src="https://source.unsplash.com/random"
-            alt="random image"
+            alt=""
             className="grid-img"
           />
           <section className="grid-image-title">This is the Title</section>
@@ -47,7 +47,7 @@ const ImagesGrid = () => {
           />
           <img
             src="https://source.unsplash.com/random"
-            alt="random image"
+            alt=""
             className="grid-img"
           />
           <section className="grid-image-title">This is the Title</section>
@@ -59,7 +59,7 @@ const ImagesGrid = () => {
           />
           <img
             src="https://source.unsplash.com/random"
-            alt="random image"
+            alt=""
             className="grid-img"
           />
           <section className="grid-image-title">This is the Title</section>
@@ -71,7 +71,7 @@ const ImagesGrid = () => {
           />
           <img
             src="https://source.unsplash.com/random"
-            alt="random image"
+            alt=""
             className="grid-img"
           />
           <section className="grid-image-title">This is the Title</section>
@@ -83,7 +83,7 @@ const ImagesGrid = () => {
           />
           <img
             src="https://source.unsplash.com/random"
-            alt="random image"
+            alt=""
             className="grid-img"
           />
           <section className="grid-image-title">This is the Title</section>
@@ -95,7 +95,7 @@ const ImagesGrid = () => {
           />
           <img
             src="https://source.unsplash.com/random"
-            alt="random image"
+            alt=""
             className="grid-img"
           />
           <section className="grid-image-title">This is the Title</section>
@@ -107,7 +107,7 @@ const ImagesGrid = () => {
           />
           <img
             src="https://source.unsplash.com/random"
-            alt="random image"
+            alt=""
             className="grid-img"
           />
           <section className="grid-image-title">This is the Title</section>
@@ -119,7 +119,7 @@ const ImagesGrid = () => {
           />
           <img
             src="https://source.unsplash.com/random"
-            alt="random image"
+            alt=""
             className="grid-img"
           />
           <section className="grid-image-title">This is the Title</section>
@@ -131,7 +131,7 @@ const ImagesGrid = () => {
           />
           <img
             src="https://source.unsplash.com/random"
-            alt="random image"
+            alt=""
             className="grid-img"
           />
           <section className="grid-image-title">This is the Title</section>
@@ -143,7 +143,7 @@ const ImagesGrid = () => {
           />
           <img
             src="https://source.unsplash.com/random"
-            alt="random image"
+            alt=""
             className="grid-img"
           />
           <section className="grid-image-title">This is the Title</section>
