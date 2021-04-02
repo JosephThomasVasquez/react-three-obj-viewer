@@ -2,6 +2,8 @@
 :root {
   --font-primary: "Mukta", Arial, Helvetica, sans-serif;
   --container-margins: 1em;
+
+  --color-primary: rgb(215, 225, 255);
 }
 
 body,
@@ -21,11 +23,18 @@ body {
   background: #18293b;
 }
 
+.nav-link {
+  margin: 20px;;
+  color: white;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
 .header-title {
   text-align: center;
   padding-top: 4rem;
   font-size: 3rem;
-  color: rgb(215, 225, 255);
+  color: var(--color-primary);
 }
 
 

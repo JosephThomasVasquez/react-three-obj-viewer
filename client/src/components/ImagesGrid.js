@@ -7,7 +7,7 @@ const ImagesGrid = () => {
         <picture className="image-grid-item">
           <source
             media="(min-width:650px)"
-            srcset="https://source.unsplash.com/random"
+            srcSet="https://source.unsplash.com/random"
           />
           <img
             src="https://source.unsplash.com/random"
@@ -19,7 +19,7 @@ const ImagesGrid = () => {
         <picture className="image-grid-item">
           <source
             media="(min-width:650px)"
-            srcset="https://source.unsplash.com/random"
+            srcSet="https://source.unsplash.com/random"
           />
           <img
             src="https://source.unsplash.com/random"
@@ -31,7 +31,7 @@ const ImagesGrid = () => {
         <picture className="image-grid-item">
           <source
             media="(min-width:650px)"
-            srcset="https://source.unsplash.com/random"
+            srcSet="https://source.unsplash.com/random"
           />
           <img
             src="https://source.unsplash.com/random"
@@ -43,7 +43,7 @@ const ImagesGrid = () => {
         <picture className="image-grid-item">
           <source
             media="(min-width:650px)"
-            srcset="https://source.unsplash.com/random"
+            srcSet="https://source.unsplash.com/random"
           />
           <img
             src="https://source.unsplash.com/random"
@@ -55,7 +55,7 @@ const ImagesGrid = () => {
         <picture className="image-grid-item">
           <source
             media="(min-width:650px)"
-            srcset="https://source.unsplash.com/random"
+            srcSet="https://source.unsplash.com/random"
           />
           <img
             src="https://source.unsplash.com/random"
@@ -67,7 +67,7 @@ const ImagesGrid = () => {
         <picture className="image-grid-item">
           <source
             media="(min-width:650px)"
-            srcset="https://source.unsplash.com/random"
+            srcSet="https://source.unsplash.com/random"
           />
           <img
             src="https://source.unsplash.com/random"
@@ -79,7 +79,7 @@ const ImagesGrid = () => {
         <picture className="image-grid-item">
           <source
             media="(min-width:650px)"
-            srcset="https://source.unsplash.com/random"
+            srcSet="https://source.unsplash.com/random"
           />
           <img
             src="https://source.unsplash.com/random"
@@ -91,7 +91,7 @@ const ImagesGrid = () => {
         <picture className="image-grid-item">
           <source
             media="(min-width:650px)"
-            srcset="https://source.unsplash.com/random"
+            srcSet="https://source.unsplash.com/random"
           />
           <img
             src="https://source.unsplash.com/random"
@@ -103,7 +103,7 @@ const ImagesGrid = () => {
         <picture className="image-grid-item">
           <source
             media="(min-width:650px)"
-            srcset="https://source.unsplash.com/random"
+            srcSet="https://source.unsplash.com/random"
           />
           <img
             src="https://source.unsplash.com/random"
@@ -115,7 +115,7 @@ const ImagesGrid = () => {
         <picture className="image-grid-item">
           <source
             media="(min-width:650px)"
-            srcset="https://source.unsplash.com/random"
+            srcSet="https://source.unsplash.com/random"
           />
           <img
             src="https://source.unsplash.com/random"
@@ -127,7 +127,7 @@ const ImagesGrid = () => {
         <picture className="image-grid-item">
           <source
             media="(min-width:650px)"
-            srcset="https://source.unsplash.com/random"
+            srcSet="https://source.unsplash.com/random"
           />
           <img
             src="https://source.unsplash.com/random"
@@ -139,7 +139,7 @@ const ImagesGrid = () => {
         <picture className="image-grid-item">
           <source
             media="(min-width:650px)"
-            srcset="https://source.unsplash.com/random"
+            srcSet="https://source.unsplash.com/random"
           />
           <img
             src="https://source.unsplash.com/random"
