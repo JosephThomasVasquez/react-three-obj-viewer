@@ -1,13 +1,36 @@
-import React from 'react';
+import React, { useState } from "react";
 
 const FileUploader = () => {
-    return (
-        <div className="container">
-            <form>
-                <input type="file" name="image"/>
-            </form>
-        </div>
-    )
-}
+  const [imgFile, setImgFile] = useState(null);
 
-export default FileUploader
+  const handleChange = (e) => {
+    let selectedFile = e.target.files[0];
+
+    const acceptedTypes = ["image/jpeg", "image/png", "image/gif"];
+
+    if (selectedFile && acceptedTypes.includes(selectedFile.type)) {
+      setImgFile(selectedFile);
+      console.log("Accepted", selectedFile);
+    } else {
+      setImgFile(null);
+      console.log("Not Allowed filetype", selectedFile);
+    }
+
+    
+  };
+
+  return (
+    <div className="container">
+      <form>
+        <input
+          type="file"
+          name="image"
+          className="img-file-selector"
+          onChange={handleChange}
+        />
+      </form>
+    </div>
+  );
+};
+
+export default FileUploader;
