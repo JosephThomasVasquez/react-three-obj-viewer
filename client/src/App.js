@@ -1,14 +1,19 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import HomeView from "./views/HomeView";
+import UploaderView from "./views/UploaderView";
 import logo from "./logo.svg";
-import "./App.css";
-import Header from "./components/Header";
-import ImagesGrid from "./components/ImagesGrid";
 
 function App() {
   return (
     <Router>
-      <Header />
-      <ImagesGrid />
+      <Switch>
+        <Route exact path="/">
+          <HomeView />
+        </Route>
+        <Route exact path="/upload">
+          <UploaderView />
+        </Route>
+      </Switch>
     </Router>
   );
 }

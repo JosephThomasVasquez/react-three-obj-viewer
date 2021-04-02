@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./components/Header";
-import ImagesGrid from "./components/ImagesGrid";
+import Header from "../components/Header";
+import ImagesGrid from "../components/ImagesGrid";
 
 const HomeView = () => {
   return (
