@@ -3,30 +3,28 @@ import ErrorMsg from "./ErrorMsg";
 import ProgressBar from "./ProgressBar";
 
 const FileUploader = () => {
-  const [imgFile, setImgFile] = useState("");
+  const [imgFile, setImgFile] = useState(null);
   const [error, setError] = useState("");
 
-  useEffect(() => {}, [imgFile]);
-
   const handleChange = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
-    const reader = new FileReader();
-    console.log("reader", reader);
+    // const reader = new FileReader();
+    // console.log("reader", reader);
 
     let selectedFile = e.target.files[0];
 
     const acceptedTypes = ["image/jpeg", "image/png", "image/gif"];
 
     if (selectedFile && acceptedTypes.includes(selectedFile.type)) {
-      // File previewer using the FileReader method
-      reader.addEventListener("load", () => {
-        setImgFile(reader.result);
-        console.log("reader img", reader.result);
-      });
+      // // File previewer using the FileReader method
+      // reader.addEventListener("load", () => {
+      //   setImgFile(reader.result);
+      //   console.log("reader img", reader.result);
+      // });
 
-      reader.readAsDataURL(selectedFile);
-
+      // reader.readAsDataURL(selectedFile);
+      setImgFile(selectedFile);
       console.log("imgFile", imgFile);
 
       setError("");
@@ -49,8 +47,7 @@ const FileUploader = () => {
         />
         {error && <ErrorMsg msg={error} />}
         <div className="file-image-display">
-          {imgFile && <ProgressBar file={imgFile} />}
-          {imgFile && <img src={imgFile} alt={imgFile} setImgFile={setImgFile} />}
+          {imgFile && <ProgressBar file={imgFile} setImgFile={setImgFile} />}
         </div>
       </form>
     </div>
