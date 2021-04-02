@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ErrorMsg from "./ErrorMsg";
+import ProgressBar from "./ProgressBar";
 
 const FileUploader = () => {
   const [imgFile, setImgFile] = useState("");
@@ -18,7 +19,6 @@ const FileUploader = () => {
     const acceptedTypes = ["image/jpeg", "image/png", "image/gif"];
 
     if (selectedFile && acceptedTypes.includes(selectedFile.type)) {
-
       // File previewer using the FileReader method
       reader.addEventListener("load", () => {
         setImgFile(reader.result);
@@ -26,9 +26,9 @@ const FileUploader = () => {
       });
 
       reader.readAsDataURL(selectedFile);
-      
+
       console.log("imgFile", imgFile);
-      
+
       setError("");
     } else {
       setImgFile(null);
@@ -49,7 +49,8 @@ const FileUploader = () => {
         />
         {error && <ErrorMsg msg={error} />}
         <div className="file-image-display">
-          {imgFile && <img src={imgFile} alt={imgFile} />}
+          {imgFile && <ProgressBar file={imgFile} />}
+          {imgFile && <img src={imgFile} alt={imgFile} setImgFile={setImgFile} />}
         </div>
       </form>
     </div>
