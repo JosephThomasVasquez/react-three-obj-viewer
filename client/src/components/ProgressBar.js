@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import UseFBStorage from "./firebaseComponents/UseFBStorage";
 
 const ProgressBar = ({ file, setImgFile }) => {
-  const { url, progress } = UseFBStorage(file);
+  const { fileUrl, progress } = UseFBStorage(file);
   console.log("Uploading...", progress);
 
   useEffect(() => {
-    if (url) {
+    if (fileUrl) {
       setImgFile(null);
     }
-  }, [url, setImgFile]);
+  }, [fileUrl, setImgFile]);
 
   return <div className="progress-bar" style={{ width: `${progress}%` }}></div>;
 };

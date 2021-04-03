@@ -22,8 +22,6 @@ const UseFBStorage = (file) => {
       "state_changed",
       (snap) => {
         let percentage = (snap.bytesTransferred / snap.totalBytes) * 100;
-        console.log("totalBytes", snap.bytesTransferred);
-        console.log("metaData", snap.metadata);
         setProgress(percentage);
         console.log("percent", percentage);
       },
@@ -32,9 +30,8 @@ const UseFBStorage = (file) => {
         console.log("upload Error", error);
       },
       async () => {
-        const url = await storageReference.getDownloadURL();
-        setFileUrl(url);
-        console.log("file url", url);
+        const fileUrl = await storageReference.getDownloadURL();
+        setFileUrl(fileUrl);
       }
     );
   }, [file]);
