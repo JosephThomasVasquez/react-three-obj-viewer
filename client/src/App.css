@@ -144,3 +144,8 @@ body {
   height: 10px;
   border-radius: 20px;
 }
+
+/* ITEM VIEW */
+.item-title {
+  color: var(--color-primary);
+}
