@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const ItemView = (document) => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
 
-export default ItemView
+  console.log(document)
+  return <div>{JSON.stringify(document)}</div>;
+};
+
+export default ItemView;

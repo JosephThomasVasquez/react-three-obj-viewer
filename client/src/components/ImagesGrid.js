@@ -21,7 +21,7 @@ const ImagesGrid = () => {
           <section className="grid-image-title">This is the Title</section>
         </picture>
         {firestoreDocs.map((doc) => (
-          <Link to={doc.fileUrl} key={doc.id} className="image-grid-item">
+          <Link to={`/item/${doc.id}`} key={doc.id} className="image-grid-item" data={doc}>
             <picture >
               <source media="(min-width:650px)" srcSet={doc.fileUrl} />
               <img src={doc.fileUrl} alt={doc.fileUrl} className="grid-img" />
