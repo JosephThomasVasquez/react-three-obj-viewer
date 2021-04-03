@@ -81,10 +81,8 @@ body {
   background: -webkit-linear-gradient(
       rgba(0, 162, 255, 0.1),
       rgba(0, 42, 179, 1)
-    ),
-    url("");
-  background: linear-gradient(rgba(0, 162, 255, 1), rgba(0, 42, 179, 1)),
-    url(""); /* The least supported option. */
+    );
+  background: linear-gradient(rgba(0, 162, 255, 1), rgba(0, 42, 179, 1)); /* The least supported option. */
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.75);
   overflow: hidden;

@@ -17,7 +17,7 @@ const UseFireStore = (collection) => {
         });
 
         setFirestoreDocs(documents);
-        console.log(documents);
+        // console.log(documents);
       });
 
     return () => unSubscribe();
