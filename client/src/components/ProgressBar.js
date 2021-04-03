@@ -4,6 +4,7 @@ import UseFBStorage from "./firebaseComponents/UseFBStorage";
 const ProgressBar = ({ file, setImgFile }) => {
   const { fileUrl, progress } = UseFBStorage(file);
   console.log("Uploading...", progress);
+  console.log(file);
 
   useEffect(() => {
     if (fileUrl) {
