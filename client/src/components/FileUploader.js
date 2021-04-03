@@ -36,6 +36,10 @@ const FileUploader = () => {
     }
   };
 
+  const handleUploadSubmit = () => {
+    
+  }
+
   return (
     <div className="container">
       <form>

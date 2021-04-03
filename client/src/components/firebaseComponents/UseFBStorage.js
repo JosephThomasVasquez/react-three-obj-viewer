@@ -22,12 +22,13 @@ const UseFBStorage = (file) => {
       .put(file, metaData)
       .then((snap) => {
         let percentage = (snap.bytesTransferred / snap.totalBytes) * 100;
-        console.log("totalBytes", snap.totalBytes);
+        console.log("totalBytes", snap.bytesTransferred);
         console.log("metaData", snap.metadata);
         setProgress(percentage);
 
         snap.ref.getDownloadURL().then((url) => {
           setFileUrl(url);
+          console.log("file url", url);
         });
       })
       .catch((error) => {
