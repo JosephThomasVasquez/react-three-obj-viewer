@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ErrorMsg from "../ErrorMsg";
-import { appStorage } from "../../firebase/config";
+import { appStorage, appFireStore } from "../../firebase/config";
 
 const UseFBStorage = (file) => {
   const [progress, setProgress] = useState(0);
@@ -16,6 +16,7 @@ const UseFBStorage = (file) => {
 
     // References
     const storageReference = appStorage.ref().child(`images/${file.name}`);
+    const collectionReference = appFireStore.collection("images");
 
     // uploads the file to FireBase storage
     storageReference.put(file, metaData).on(
@@ -31,6 +32,7 @@ const UseFBStorage = (file) => {
       },
       async () => {
         const fileUrl = await storageReference.getDownloadURL();
+        collectionReference.add({ fileUrl });
         setFileUrl(fileUrl);
       }
     );
