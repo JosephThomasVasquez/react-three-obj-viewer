@@ -5,11 +5,11 @@ import { appFireStore } from "../firebase/config";
 const ItemView = ({ location, match }) => {
   const [docData, setDocData] = useState({
     fileUrl: "",
-    createdAt: ''
+    createdAt: "",
   });
 
-  console.log("location", location);
-  console.log("match", match.params.id);
+  // console.log("location", location);
+  // console.log("match", match.params.id);
 
   // Get the firestore document from the collection using match.params.id
   const docReference = appFireStore
@@ -21,16 +21,18 @@ const ItemView = ({ location, match }) => {
       console.log("snap", snap.data());
 
       setDocData({ ...snap.data(), fileUrl: snap.data().fileUrl });
-      console.log('Doc Data', docData)
-
+      // console.log("Doc Data", docData);
     });
-  }, [match]);
+  }, [match.params.id]);
 
   return (
     <div>
       <Header />
-      <div className="item-title">
-        <img src={docData.fileUrl} alt="" />
+      <div className="container">
+        <div className="item-grid-container">
+          <div className="item-title">{match.params.id}</div>
+          <img src={docData.fileUrl} alt="" />
+        </div>
       </div>
     </div>
   );

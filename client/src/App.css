@@ -147,3 +147,14 @@ body {
 .item-title {
   color: var(--color-primary);
 }
+
+.item-grid-container {
+  width: 95%;
+  display: grid;
+  grid-template-columns: 200px 100px 100px;
+  gap: var(--container-margins);
+}
+
+.item-img {
+  width: 100%;
+}

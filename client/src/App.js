@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomeView from "./views/HomeView";
 import UploaderView from "./views/UploaderView";
 import ItemView from "./views/ItemView";
-import logo from "./logo.svg";
 
 function App() {
   return (

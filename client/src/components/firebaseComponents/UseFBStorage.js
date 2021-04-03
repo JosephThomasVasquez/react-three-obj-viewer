@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import ErrorMsg from "../ErrorMsg";
+import { useState, useEffect } from "react";
 import { appStorage, appFireStore, timestamp } from "../../firebase/config";
 
 const UseFBStorage = (file) => {

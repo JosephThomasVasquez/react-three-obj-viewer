@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ErrorMsg from "./ErrorMsg";
 import ProgressBar from "./ProgressBar";
 
@@ -53,6 +53,7 @@ const FileUploader = () => {
         <div className="file-image-display">
           {imgFile && <ProgressBar file={imgFile} setImgFile={setImgFile} />}
         </div>
+        <input type="button" value="" onClick={handleUploadSubmit}/>
       </form>
     </div>
   );
