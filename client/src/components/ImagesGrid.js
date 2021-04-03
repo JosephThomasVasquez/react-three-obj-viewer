@@ -1,11 +1,13 @@
 import React from "react";
+import UseFireStore from "./firebaseComponents/UseFireStore";
 
 const ImagesGrid = () => {
+  
+  const { firestoreDocs } = UseFireStore("images");
+
   return (
     <div className="container">
-
       <div className="grid-container">
-
         <picture className="image-grid-item">
           <source
             media="(min-width:650px)"
@@ -18,7 +20,6 @@ const ImagesGrid = () => {
           />
           <section className="grid-image-title">This is the Title</section>
         </picture>
-        
       </div>
     </div>
   );
