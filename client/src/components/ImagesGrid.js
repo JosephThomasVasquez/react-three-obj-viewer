@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import UseFireStore from "./firebaseComponents/UseFireStore";
 
 const ImagesGrid = () => {
@@ -20,18 +21,13 @@ const ImagesGrid = () => {
           <section className="grid-image-title">This is the Title</section>
         </picture>
         {firestoreDocs.map((doc) => (
-          <picture className="image-grid-item" key={doc.id}>
-            <source
-              media="(min-width:650px)"
-              srcSet={doc.fileUrl}
-            />
-            <img
-              src={doc.fileUrl}
-              alt={doc.fileUrl}
-              className="grid-img"
-            />
-            <section className="grid-image-title">{doc.id}</section>
-          </picture>
+          <Link to={doc.fileUrl} key={doc.id} className="image-grid-item">
+            <picture >
+              <source media="(min-width:650px)" srcSet={doc.fileUrl} />
+              <img src={doc.fileUrl} alt={doc.fileUrl} className="grid-img" />
+              <section className="grid-image-title">{doc.id}</section>
+            </picture>
+          </Link>
         ))}
       </div>
     </div>
