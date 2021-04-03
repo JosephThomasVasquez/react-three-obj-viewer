@@ -2,7 +2,6 @@ import React from "react";
 import UseFireStore from "./firebaseComponents/UseFireStore";
 
 const ImagesGrid = () => {
-  
   const { firestoreDocs } = UseFireStore("images");
 
   return (
@@ -20,6 +19,20 @@ const ImagesGrid = () => {
           />
           <section className="grid-image-title">This is the Title</section>
         </picture>
+        {firestoreDocs.map((doc) => (
+          <picture className="image-grid-item" key={doc.id}>
+            <source
+              media="(min-width:650px)"
+              srcSet={doc.fileUrl}
+            />
+            <img
+              src={doc.fileUrl}
+              alt={doc.fileUrl}
+              className="grid-img"
+            />
+            <section className="grid-image-title">{doc.id}</section>
+          </picture>
+        ))}
       </div>
     </div>
   );
