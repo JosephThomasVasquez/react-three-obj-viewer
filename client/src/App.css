@@ -137,6 +137,18 @@ body {
 
 /* UPLOADER STYLES */
 
+.upload-label {
+  color: var(--color-primary);
+}
+
+.upload-title {
+  width: 90%;
+  height: 30px;
+  margin: 20px 5%;
+  border: none;
+  border-radius: 4px;
+}
+
 .img-file-selector {
   color: white;
 }
