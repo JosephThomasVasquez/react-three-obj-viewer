@@ -4,6 +4,7 @@ import ProgressBar from "./ProgressBar";
 
 const FileUploader = () => {
   const [imgFile, setImgFile] = useState(null);
+  const [inputData, setInputData] = useState("");
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
@@ -37,8 +38,8 @@ const FileUploader = () => {
   };
 
   const handleUploadSubmit = (e) => {
-      e.preventDefault();
-  }
+    e.preventDefault();
+  };
 
   return (
     <div className="container">
@@ -49,11 +50,12 @@ const FileUploader = () => {
           className="img-file-selector"
           onChange={handleChange}
         />
+        <input type="text" name="title" className="upload-title" />
         {error && <ErrorMsg msg={error} />}
         <div className="file-image-display">
           {imgFile && <ProgressBar file={imgFile} setImgFile={setImgFile} />}
         </div>
-        <input type="button" value="" onClick={handleUploadSubmit}/>
+        <input type="button" value="" onClick={handleUploadSubmit} />
       </form>
     </div>
   );
