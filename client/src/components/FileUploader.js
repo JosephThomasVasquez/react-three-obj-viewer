@@ -36,8 +36,8 @@ const FileUploader = () => {
     }
   };
 
-  const handleUploadSubmit = () => {
-    
+  const handleUploadSubmit = (e) => {
+      e.preventDefault();
   }
 
   return (
