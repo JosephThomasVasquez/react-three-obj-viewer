@@ -4,11 +4,19 @@ import ProgressBar from "./ProgressBar";
 
 const FileUploader = () => {
   const [imgFile, setImgFile] = useState(null);
-  const [inputData, setInputData] = useState("");
+  const [inputData, setInputData] = useState({
+    title: '',
+    category: '',
+    format: '',
+    polyRange: '',
+
+  });
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
     // e.preventDefault();
+
+    setInputData({})
 
     // const reader = new FileReader();
     // console.log("reader", reader);
@@ -50,6 +58,7 @@ const FileUploader = () => {
           className="img-file-selector"
           onChange={handleChange}
         />
+        <label htmlFor="title" className="upload-label">Title</label>
         <input type="text" name="title" className="upload-title" />
         {error && <ErrorMsg msg={error} />}
         <div className="file-image-display">
