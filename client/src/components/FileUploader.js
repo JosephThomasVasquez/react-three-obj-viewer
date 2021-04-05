@@ -67,12 +67,26 @@ const FileUploader = () => {
         <label htmlFor="title" className="upload-label">
           Title
         </label>
-        <input type="text" name="title" className="upload-title" onChange={handleInputChange} />
+        <input
+          type="text"
+          name="title"
+          className="upload-title"
+          onChange={handleInputChange}
+        />
+        <label htmlFor="category" className="upload-label">
+          Category
+        </label>
+        <input
+          type="checkbox"
+          name="category"
+          className="upload-checkbox"
+          onChange={handleInputChange}
+        />
         {error && <ErrorMsg msg={error} />}
         <div className="file-image-display">
           {imgFile && <ProgressBar file={imgFile} setImgFile={setImgFile} />}
         </div>
-        <input type="button" value="" onClick={handleUploadSubmit} />
+        <button type="submit" value="" onClick={handleUploadSubmit}>Submit</button>
       </form>
     </div>
   );
