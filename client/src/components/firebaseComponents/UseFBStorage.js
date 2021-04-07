@@ -34,7 +34,7 @@ const UseFBStorage = (file, inputData) => {
       async () => {
         const fileUrl = await storageReference.getDownloadURL();
         const createdAt = timestamp();
-        collectionReference.add({ fileUrl, createdAt, title: inputData.title });
+        collectionReference.add({ fileUrl, createdAt, title, category, format, polyRange });
         setFileUrl(fileUrl);
       }
     );
