@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { appStorage, appFireStore, timestamp } from "../../firebase/config";
 
-const UseFBStorage = (file) => {
+const UseFBStorage = (file, inputData) => {
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState(null);
   const [fileUrl, setFileUrl] = useState(null);
@@ -32,7 +32,7 @@ const UseFBStorage = (file) => {
       async () => {
         const fileUrl = await storageReference.getDownloadURL();
         const createdAt = timestamp();
-        collectionReference.add({ fileUrl, createdAt });
+        collectionReference.add({ fileUrl, createdAt, title: inputData.title });
         setFileUrl(fileUrl);
       }
     );

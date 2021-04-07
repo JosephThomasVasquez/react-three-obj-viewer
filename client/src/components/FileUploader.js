@@ -53,6 +53,8 @@ const FileUploader = () => {
 
   const handleUploadSubmit = (e) => {
     e.preventDefault();
+
+
   };
 
   return (
@@ -84,7 +86,7 @@ const FileUploader = () => {
         />
         {error && <ErrorMsg msg={error} />}
         <div className="file-image-display">
-          {imgFile && <ProgressBar file={imgFile} setImgFile={setImgFile} inputData={setInputData} />}
+          {imgFile && inputData !== '' && <ProgressBar file={imgFile} setImgFile={setImgFile} inputData={inputData} />}
         </div>
         <button type="submit" value="" onClick={handleUploadSubmit}>Submit</button>
       </form>
