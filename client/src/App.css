@@ -164,12 +164,14 @@ body {
 /* ITEM VIEW */
 .item-title {
   color: var(--color-primary);
+  text-align: center;
 }
 
 .item-grid-container {
-  width: 95%;
+  width: 100%;
   display: grid;
-  grid-template-columns: 200px 100px 100px;
+  grid-template-columns: 100%;
+  grid-template-rows: 20px 300px 100px;
   gap: var(--container-margins);
 }
 
