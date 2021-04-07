@@ -9,6 +9,8 @@ const UseFBStorage = (file, inputData) => {
   useEffect(() => {
     console.log("file", file);
 
+    const { title, category, format, polyRange } = inputData;
+
     const metaData = {
       contentType: file.type,
     };
