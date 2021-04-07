@@ -44,11 +44,11 @@ const FileUploader = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    console.log("name/val/files:", name, value);
+    // console.log("name/val/files:", name, value);
 
     setInputData({ ...inputData, [name]: value });
 
-    console.log(inputData);
+    // console.log(inputData);
   };
 
   const handleUploadSubmit = (e) => {
@@ -84,7 +84,7 @@ const FileUploader = () => {
         />
         {error && <ErrorMsg msg={error} />}
         <div className="file-image-display">
-          {imgFile && <ProgressBar file={imgFile} setImgFile={setImgFile} />}
+          {imgFile && <ProgressBar file={imgFile} setImgFile={setImgFile} inputData={setInputData} />}
         </div>
         <button type="submit" value="" onClick={handleUploadSubmit}>Submit</button>
       </form>
