@@ -31,7 +31,7 @@ const ItemView = ({ location, match }) => {
       <div className="container">
         <div className="item-grid-container">
           <div className="item-title">{match.params.id}</div>
-          <img src={docData.fileUrl} alt="" />
+          <img src={docData.fileUrl} alt="" className="item-img-display"/>
         </div>
       </div>
     </div>

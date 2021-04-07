@@ -173,6 +173,11 @@ body {
   gap: var(--container-margins);
 }
 
+.item-img-display {
+  width: 400px;
+  margin: 0 auto;
+}
+
 .item-img {
   width: 100%;
 }
